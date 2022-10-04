@@ -40,7 +40,7 @@ async def criando_produto(produto: Item):
 async def editando_produto(produto: Item):
   return banco
   
-@app.delete("/{produto_id}")
+@app.delete("/{produto_id}", status_code=200)
 async def apagar_produto(produto_id: str):
   posicao = -1
   for index, produto in enumerate(banco):
